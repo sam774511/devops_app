@@ -1,0 +1,343 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #4895ef;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #2b2d42;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white !important;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 4rem 0;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Calculator Container */
+.calculator-container {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card Styles */
+.calculator-card {
+    background: var(--card-background);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    background: rgba(67, 97, 238, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.card-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Form Elements */
+.input-group {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: var(--text-muted);
+}
+
+.form-control, .form-select {
+    border: 1px solid #e9ecef;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    color: white;
+}
+
+.btn-gradient-secondary {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border: none;
+    color: white;
+}
+
+.btn-gradient-info {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border: none;
+    color: white;
+}
+
+.btn-gradient-warning {
+    background: linear-gradient(135deg, #f1c40f, #f39c12);
+    border: none;
+    color: white;
+}
+
+/* Results Section */
+.result-section {
+    padding: 1rem;
+    border-radius: 12px;
+    display: none;
+}
+
+.result-display {
+    display: block !important;
+    animation: slideUp 0.5s ease;
+}
+
+.alert {
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Additional Button Gradients */
+.btn-gradient-purple {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    border: none;
+    color: white;
+}
+
+.btn-gradient-teal {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    border: none;
+    color: white;
+}
+
+/* Health Tips Section */
+.health-tips-section {
+    padding: 2rem 0;
+}
+
+.tip-card {
+    background: var(--card-background);
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tip-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    background: rgba(67, 97, 238, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.tip-card h5 {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tip-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Indicators */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.progress-bar {
+    border-radius: 4px;
+}
+
+/* Chart Styles */
+.measurement-chart {
+    width: 100%;
+    height: 200px;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .calculator-container {
+        margin-top: -2rem;
+    }
+    
+    .calculator-card {
+        margin-bottom: 1rem;
+    }
+    
+    .tip-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --card-background: #2d2d2d;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.calculator-icon i {
+    animation: pulse 2s infinite;
+}
