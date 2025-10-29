@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: healthcalc-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: healthcalc
+  template:
+    metadata:
+      labels:
+        app: healthcalc
+    spec:
+      containers:
+      - name: healthcalc
+        image: healthcalc-app:latest
+        imagePullPolicy: Never # Important for local images
+        ports:
+        - containerPort: 5000
