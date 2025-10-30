@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: healthcalc
-        image: healthcalc-app:latest
-        imagePullPolicy: Never # Important for local images
+        image: us-central1-docker.pkg.dev/<your-gcp-project-id>/healthcalc-repo/healthcalc-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
